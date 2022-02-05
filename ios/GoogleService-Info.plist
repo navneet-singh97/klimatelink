@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>162874216792-aqs4qbio77lueo0u5d0ahr9pe6vnh88s.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.162874216792-aqs4qbio77lueo0u5d0ahr9pe6vnh88s</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>162874216792-afiovsr9ksrdhtbd6spc3aa7liks0apa.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD_WacYbJWvl95MV1Et7v2VVPT8kofXCb8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>162874216792</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.app.klimatelink</string>
+	<key>PROJECT_ID</key>
+	<string>klimatelink-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>klimatelink-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:162874216792:ios:9a14dc0d9939fb7af1552d</string>
+	<key>DATABASE_URL</key>
+	<string>https://klimatelink-app-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

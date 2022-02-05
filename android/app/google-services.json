@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "162874216792",
+    "firebase_url": "https://klimatelink-app-default-rtdb.firebaseio.com",
+    "project_id": "klimatelink-app",
+    "storage_bucket": "klimatelink-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:162874216792:android:23ae37945450e3a7f1552d",
+        "android_client_info": {
+          "package_name": "com.app.klimatelink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "162874216792-afiovsr9ksrdhtbd6spc3aa7liks0apa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.klimatelink",
+            "certificate_hash": "06a75077f18b015330b83916103967eb81cd2314"
+          }
+        },
+        {
+          "client_id": "162874216792-0jfj4lucl89869v6p0oos4uo66ko79gp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsM1vjjSgdM6r2Q_Rd8QSyjIU57oU5yvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "162874216792-0jfj4lucl89869v6p0oos4uo66ko79gp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "162874216792-aqs4qbio77lueo0u5d0ahr9pe6vnh88s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.klimatelink"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

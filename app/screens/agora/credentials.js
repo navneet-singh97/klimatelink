@@ -1,0 +1,6 @@
+export const cred = {
+  agora_AppID: '208b847828514d91877a2f0fab5ae939',
+  agora_AppCrt: '9433985b10364b65865c7795046521d0',
+  agora_app_token:
+    '006208b847828514d91877a2f0fab5ae939IAAlSbyCuOOhkXL1X80S1llC636Pjz2k+TGqID4nid8vwTqC+I0AAAAAEAC2O8QFi0/bYAEA6AMbDNpg',
+};

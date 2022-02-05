@@ -1,0 +1,139 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+    - main
+    - gaurav
+
+pool:
+  vmImage: 'macOs-latest'
+   
+
+variables:
+  - group: ClimateX
+  - name: configuration
+    value: 'Release'
+  - name: sdk
+    value: 'iphoneos'
+name: $(date:yyyy).$(Month)$(rev:.r)
+
+jobs:
+- job: build
+  timeoutInMinutes: 0
+  steps:
+ 
+  - task: NodeTool@0
+    inputs:
+     versionSpec: '12.18.3'
+     checkLatest: true
+    displayName: "InstallNode"
+  - script: npm install
+  - script: npx jetify
+
+  - task: Gradle@2
+    inputs:
+       workingDirectory: 'android/'   
+       gradleWrapperFile: 'android/gradlew'
+       gradleOptions: '-Xmx3072m'
+       publishJUnitResults: false
+       testResultsFiles: '**/TEST-*.xml'
+       tasks: 'bundleRelease'
+       javaHomeOption: 'JDKVersion'
+  - task: AndroidSigning@3
+    inputs:
+       apkFiles: '**/*.aab'      
+       apksignerKeystoreFile: 'climateX.keystore'
+       apksign: true    
+       apksignerArguments: --min-sdk-version 23
+       apksignerKeystorePassword: '$(androidStorePassword)'
+       apksignerKeystoreAlias: '$(androidKeyAlias)'
+       apksignerKeyPassword: '$(androidKeyPassword)'
+       zipalign: false
+  - script: mv android/app/build/outputs/bundle/release/app-release.aab ClimateX$(Build.BuildNumber).aab
+    displayName: 'Rename apk'
+  - task: PublishBuildArtifacts@1
+    inputs:
+       pathtoPublish: ClimateX$(Build.BuildNumber).aab
+       artifactName: container
+       publishLocation: 'container'
+  - task: CocoaPods@0
+    displayName: "Install CocoaPods dependencies"
+    inputs:
+       workingDirectory: 'ios'
+       forceRepoUpdate: false
+  - task: InstallAppleCertificate@2
+    inputs:
+       certSecureFile: 'ClimateX.p12'
+       certPwd: '$(IOS_DIST_P12_PASSWORD)'
+       keychain: 'temp'
+  - task: InstallAppleProvisioningProfile@1
+    inputs:
+       provisioningProfileLocation: 'secureFiles'
+       provProfileSecureFile: 'ClimateX.mobileprovision'
+  - task: Xcode@5
+    inputs:
+       actions: 'build'
+       configuration: '$(configuration)'
+       sdk: '$(sdk)'
+       xcWorkspacePath: 'ios/ClimateX.xcworkspace'
+       scheme: 'ClimateX'
+       xcodeVersion: 'default'
+       packageApp: true
+       signingOption: 'manual'
+       signingIdentity: '$(APPLE_CERTIFICATE_SIGNING_IDENTITY)'
+       provisioningProfileUuid: '$(APPLE_PROV_PROFILE_UUID)'
+
+  - task: CopyFiles@2
+    inputs:
+        contents: '**/*.ipa'
+        targetFolder: '$(build.artifactStagingDirectory)'
+        overWrite: true
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+        pathtoPublish: '$(build.artifactStagingDirectory)/output/$(sdk)/$(configuration)' 
+        artifactName: 'container' 
+        publishLocation: 'Container'
+
+  
+    
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+    
+
+
+    
+ 
+
+

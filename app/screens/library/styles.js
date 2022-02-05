@@ -1,0 +1,305 @@
+import {StyleSheet, Dimensions} from 'react-native';
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
+import {color} from '../../theme';
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: color.background,
+    //justifyContent: "center",
+    //alignItems: "center",
+  },
+  logo: {
+    width: windowWidth / 2.6,
+    height: windowWidth / 2.6,
+    marginBottom: 6,
+  },
+  mainLogo: {
+    width: windowWidth * 0.36,
+    height: windowWidth * 0.36,
+    marginBottom: windowWidth * 0.06,
+    alignSelf: 'center',
+  },
+  appName: {fontSize: 26, color: 'black'},
+  titleText: {
+    color: color.primary,
+    fontFamily: 'CenturyGothic-Bold',
+    alignSelf: 'center',
+    fontSize: windowWidth * 0.069,
+    textShadowColor: color.primaryColor,
+    textShadowOffset: {width: 1, height: 1.6},
+    textShadowRadius: 1,
+    marginBottom: windowWidth * 0.16,
+  },
+  topProfileContainer: {
+    width: windowWidth,
+    padding: windowWidth * 0.0516,
+  },
+  name: {
+    color: color.secondaryColor,
+    fontFamily: 'CenturyGothic-Bold',
+    fontSize: windowWidth * 0.0699,
+  },
+  locationIcon: {
+    color: color.greyText,
+    fontSize: windowWidth * 0.0416,
+    marginTop: windowWidth * 0.0069,
+    marginRight: windowWidth * 0.016,
+  },
+  locationText: {
+    color: '#939aa0',
+    fontFamily: 'CenturyGothic-Bold',
+    fontSize: windowWidth * 0.0416,
+  },
+  profilePic: {
+    width: windowWidth / 1.12,
+    height: windowWidth / 1.6,
+    padding: windowWidth * 0.0316,
+  },
+  followBtn: {
+    backgroundColor: color.secondaryColor,
+    alignSelf: 'flex-end',
+    borderRadius: windowWidth * 0.096,
+  },
+  followText: {
+    color: color.textColor,
+    fontFamily: 'CenturyGothic',
+    fontSize: windowWidth * 0.036,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+  },
+  interactionContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: windowWidth * 0.06,
+  },
+  subInteraction: {
+    flexDirection: 'column',
+  },
+  countText: {
+    fontSize: windowWidth * 0.06,
+    textAlign: 'center',
+    fontFamily: 'CenturyGothic',
+  },
+  interactionTitle: {
+    color: color.greyText,
+    fontSize: windowWidth * 0.0406,
+    fontFamily: 'CenturyGothic-Bold',
+    textAlign: 'center',
+  },
+  aboutContainer: {
+    flexDirection: 'row',
+    padding: windowWidth * 0.06,
+    justifyContent: 'space-around',
+  },
+
+  aboutInfo: {
+    color: color.blackText,
+    fontSize: windowWidth * 0.0436,
+    fontFamily: 'CenturyGothic',
+  },
+  mutualFollowersContainer: {
+    flexDirection: 'column',
+    padding: windowWidth * 0.06,
+  },
+  subTitle: {
+    color: color.appGreen,
+    fontSize: windowWidth * 0.046,
+    fontFamily: 'CenturyGothic-Bold',
+  },
+  viewAlltext: {
+    color: color.appGreen,
+    fontSize: windowWidth * 0.04136,
+    fontFamily: 'CenturyGothic',
+  },
+  renderView: {
+    width: windowWidth / 2.196,
+    height: windowWidth / 2.946,
+    backgroundColor: color.greyBg,
+    marginRight: windowWidth * 0.0316,
+    borderRadius: windowWidth * 0.036,
+    marginBottom: windowWidth * 0.0135,
+  },
+  renderImage: {
+    width: windowWidth / 2.196,
+    height: windowWidth / 2.946,
+    borderRadius: windowWidth * 0.036,
+  },
+  renderItemStyle: {
+    color: color.appGreen,
+    fontSize: windowWidth * 0.0396,
+    fontFamily: 'CenturyGothic',
+    width: windowWidth / 2.46,
+  },
+  activeListView: {
+    backgroundColor: 'transparent',
+    width: windowWidth * 0.194,
+    height: windowWidth * 0.1941,
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+  activeListName: {
+    color: 'black',
+    fontSize: windowWidth * 0.036,
+    fontFamily: 'CenturyGothic',
+    textAlign: 'center',
+  },
+  listImageView: {
+    width: windowWidth / 6.01,
+    height: windowWidth / 4.49,
+    borderWidth: 0,
+    justifyContent: 'space-around',
+    margin: windowWidth * 0.0096,
+    borderRadius: windowWidth * 0.0196,
+  },
+  CommunityContainer: {flexDirection: 'column', padding: windowWidth * 0.06},
+  communityImage: {
+    width: windowWidth / 2.96,
+    height: windowWidth / 2.96,
+    borderRadius: windowWidth * 0.0196,
+    marginRight: windowWidth * 0.06,
+  },
+  topSpaceContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: windowWidth * 0.06,
+  },
+  cardView: {
+    //marginHorizontal: windowWidth * 0.036,
+    width: windowWidth - 50,
+    borderRadius: windowWidth * 0.036,
+  },
+  innerCardView: {
+    backgroundColor: 'white',
+    flexDirection: 'column',
+    padding: windowWidth * 0.036,
+    borderRadius: windowWidth * 0.036,
+    paddingBottom: 0,
+  },
+  notificationView: {flexDirection: 'row', alignItems: 'center'},
+
+  notificationTitleText: {
+    color: 'black',
+    fontSize: windowWidth * 0.0416,
+    fontFamily: 'CenturyGothic',
+    //marginTop: windowWidth * 0.016,
+  },
+  notificationText: {
+    color: color.lightGrey,
+    fontSize: windowWidth * 0.036,
+    fontFamily: 'CenturyGothic',
+    textAlign: 'justify',
+    marginTop: windowWidth * 0.0116,
+  },
+  iconView: {
+    width: windowWidth * 0.096,
+    height: windowWidth * 0.096,
+    borderRadius: (windowWidth * 0.196) / 2,
+    //borderWidth: 0.6,
+    borderColor: 'black',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  iconText: {
+    color: 'white',
+    fontSize: windowWidth * 0.036,
+    fontFamily: 'CenturyGothic',
+    alignSelf: 'center',
+  },
+  toggleInfoText: {
+    color: color.lightGrey,
+    fontSize: windowWidth * 0.036,
+    fontFamily: 'CenturyGothic',
+    textAlign: 'justify',
+    marginBottom: windowWidth * 0.0136,
+  },
+  visibiltyText: {
+    color: color.primaryColor,
+    fontSize: windowWidth * 0.036,
+    fontFamily: 'CenturyGothic-Bold',
+  },
+  matchListTitle: {
+    color: color.blackText,
+    fontSize: windowWidth * 0.0496,
+    fontFamily: 'CenturyGothic',
+    margin: windowWidth * 0.046,
+    marginRight: windowWidth * 0.0136,
+    fontWeight: '400',
+  },
+  smallCircle: {
+    backgroundColor: color.secondaryColor,
+    height: windowWidth * 0.06,
+    width: windowWidth * 0.06,
+    borderRadius: (windowWidth * 0.06) / 2,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: windowWidth * 0.046,
+  },
+  matchCount: {
+    color: color.text,
+    fontSize: windowWidth * 0.0436,
+    fontFamily: 'CenturyGothic',
+    fontWeight: '400',
+  },
+
+  cardMatchView: {
+    marginHorizontal: windowWidth * 0.036,
+    borderRadius: windowWidth * 0.0316,
+  },
+  innerMatchCardView: {
+    backgroundColor: 'white',
+    flexDirection: 'column',
+    padding: windowWidth * 0.01,
+    paddingHorizontal: windowWidth * 0.036,
+    borderRadius: windowWidth * 0.0316,
+    height: windowWidth * 0.1663,
+  },
+  rightContainImage: {
+    height: windowWidth * 0.0613,
+    width: windowWidth * 0.0613,
+    alignSelf: 'center',
+  },
+  cardSubContainer: {flexDirection: 'row', alignItems: 'center'},
+  titleView: {
+    flex: 1,
+    paddingLeft: windowWidth * 0.0369,
+  },
+  leftContainImage: {
+    height: windowWidth * 0.07146,
+    width: windowWidth * 0.07146,
+    alignSelf: 'center',
+  },
+  titleStyle: {
+    color: color.blackText,
+    fontSize: windowWidth * 0.0416,
+    fontFamily: 'CenturyGothic',
+    //marginTop: windowWidth * 0.016,
+  },
+  textStyle: {
+    color: color.appGreen,
+    fontSize: windowWidth * 0.036,
+    fontFamily: 'CenturyGothic',
+    textAlign: 'justify',
+    // marginTop: windowWidth * 0.0116,
+  },
+  communitySubTitle: {
+    color: color.blackText,
+    fontSize: windowWidth * 0.046,
+    fontFamily: 'CenturyGothic',
+    marginLeft: windowWidth * 0.0136,
+    marginBottom: windowWidth * 0.0136,
+  },
+
+  tagView: {
+    backgroundColor: color.appGreen,
+    margin: windowWidth * 0.0136,
+    borderRadius: windowWidth * 0.0136,
+  },
+  tagText: {
+    color: color.text,
+    fontSize: windowWidth * 0.036,
+    fontFamily: 'CenturyGothic',
+    margin: windowWidth * 0.036,
+  },
+});
